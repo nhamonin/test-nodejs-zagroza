@@ -5,13 +5,14 @@ import multer from 'multer';
 import csv from 'fast-csv';
 
 import { authenticateToken } from '../middleware/authenticateToken.js';
+import { config } from '../config.js';
 
 const router = express.Router();
 
 const upload = multer({
   dest: 'uploads/',
   limits: {
-    fileSize: 1000000, // Limit file size to 1MB, TODO: move to config
+    fileSize: config.fileSizeLimit,
   },
   fileFilter(req, file, cb) {
     if (!file.originalname.match(/\.(csv)$/)) {
