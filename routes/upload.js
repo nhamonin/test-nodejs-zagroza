@@ -51,7 +51,9 @@ router.post(
 
     createReadStream(filePath)
       .pipe(csv.parse({ headers: true }))
-      .on('error', (error) => console.error(error))
+      .on('error', (error) =>
+        res.status(400).send({ error: 'Failed to parse CSV file: ' + error })
+      )
       .on('data', (row) => data.push(row))
       .on('end', () => {
         // TODO: Process the data depending on the table type
