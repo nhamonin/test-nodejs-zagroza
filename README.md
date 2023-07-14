@@ -38,7 +38,7 @@ The client is a basic web application used for testing the server. Use it to log
 
 ## Project Hosting
 
-This project is hosted at [http://185.166.216.70:3000/](http://185.166.216.70:3000/). The Swagger API documentation is available at [http://185.166.216.70:3000/api-docs/](http://185.166.216.70:3000/api-docs/).
+The Swagger API documentation is available at [http://185.166.216.70:3000/api-docs/](http://185.166.216.70:3000/api-docs/).
 
 ## Project Repository
 

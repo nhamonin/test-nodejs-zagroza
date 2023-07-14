@@ -27,7 +27,7 @@ const upload = multer({
  * /file-upload:
  *   post:
  *     tags:
- *       - File
+ *       - File upload
  *     summary: Uploads a file
  *     description: Uploads a file and responds with the details of the upload
  *     security:
