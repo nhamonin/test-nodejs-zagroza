@@ -42,7 +42,7 @@ const upload = multer({
  *                 type: string
  *                 format: binary
  *     responses:
- *       200:
+ *       201:
  *         description: File successfully uploaded
  *       400:
  *         description: Error while uploading file

@@ -13,7 +13,7 @@ const router = express.Router();
  *     summary: Get auth token
  *     description: Logs in the user and returns an authentication token
  *     responses:
- *       200:
+ *       201:
  *         description: Token was successfully generated
  */
 router.post('/', loginController);

@@ -5,5 +5,5 @@ export const loginController = (req, res, next) => {
   const user = { id: 1, username: 'testUser' };
   const token = jwt.sign(user, process.env.JWT_SECRET_KEY, { expiresIn: '1h' });
 
-  res.json({ token });
+  res.status(201).json({ token });
 };

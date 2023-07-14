@@ -34,7 +34,7 @@ export const uploadController = (req, res, next) => {
 
       tableConfig.process(rows, filePath, tableConfig.type, res);
 
-      res.send({
+      res.status(201).send({
         message: tableConfig.message,
       });
     });
