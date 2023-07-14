@@ -27,4 +27,5 @@ export const config = {
       message: 'Successfully saved locally passwordRecovery data',
     },
   ],
+  SERVER_URL: process.env.SERVER_URL || 'http://localhost:3000',
 };

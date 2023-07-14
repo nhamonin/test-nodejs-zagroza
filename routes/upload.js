@@ -22,6 +22,33 @@ const upload = multer({
   },
 });
 
+/**
+ * @swagger
+ * /file-upload:
+ *   post:
+ *     tags:
+ *       - File
+ *     summary: Uploads a file
+ *     description: Uploads a file and responds with the details of the upload
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               file:
+ *                 type: string
+ *                 format: binary
+ *     responses:
+ *       200:
+ *         description: File successfully uploaded
+ *       400:
+ *         description: Error while uploading file
+ *       401:
+ *         description: Unauthorized
+ */
 router.post(
   '/',
   authenticateToken,
