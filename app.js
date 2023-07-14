@@ -1,10 +1,12 @@
 import express from 'express';
 import dotenv from 'dotenv';
+dotenv.config();
 
 import authRoutes from './routes/auth.js';
 import uploadRoutes from './routes/upload.js';
+import { testEnvVariables } from './utils/checkEnvVariables.js';
 
-dotenv.config();
+testEnvVariables();
 
 const app = express();
 

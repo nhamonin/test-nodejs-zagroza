@@ -1,3 +1,4 @@
+import { processSimpleUsers } from './utils/processSimpleUsers.js';
 import { processPasswordRecovery } from './utils/processPasswordRecovery.js';
 
 export const config = {
@@ -6,9 +7,7 @@ export const config = {
     {
       type: 'simpleUsers',
       headers: ['Username', 'Identifier', 'First name', 'Last name'],
-      process: (data) => {
-        // TODO: Add logic for processing simpleUsers data
-      },
+      process: processSimpleUsers,
       message: 'Successfully saved in DB simpleUsers data',
     },
     {
